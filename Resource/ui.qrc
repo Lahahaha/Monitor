@@ -1,0 +1,145 @@
+<RCC>
+    <qresource prefix="/MainWindow">
+        <file>MainWindow/background.jpg</file>
+        <file>MainWindow/monitoring.png</file>
+        <file>MainWindow/monitoring_press.png</file>
+        <file>MainWindow/quiet.png</file>
+        <file>MainWindow/setup.png</file>
+        <file>MainWindow/setup_press.png</file>
+        <file>MainWindow/signalquality.png</file>
+        <file>MainWindow/signalquality_press.png</file>
+        <file>MainWindow/trend.png</file>
+        <file>MainWindow/trend_press.png</file>
+        <file>MainWindow/volunme.png</file>
+        <file>MainWindow/home.png</file>
+        <file>MainWindow/home_press.png</file>
+        <file>MainWindow/help_about.png</file>
+        <file>MainWindow/help_about_d.png</file>
+        <file alias="power_0">MainWindow/power_0.png</file>
+        <file alias="power_0_ac">MainWindow/power_0_ac.png</file>
+        <file alias="power_1">MainWindow/power_1.png</file>
+        <file alias="power_1_ac">MainWindow/power_1_ac.png</file>
+        <file alias="power_2">MainWindow/power_2.png</file>
+        <file alias="power_2_ac">MainWindow/power_2_ac.png</file>
+        <file alias="power_3">MainWindow/power_3.png</file>
+        <file alias="power_3_ac">MainWindow/power_3_ac.png</file>
+        <file alias="power_4">MainWindow/power_4.png</file>
+        <file alias="power_4_ac">MainWindow/power_4_ac.png</file>
+        <file alias="power_5">MainWindow/power_5.png</file>
+        <file alias="power_5_ac">MainWindow/power_5_ac.png</file>
+    </qresource>
+    <qresource prefix="/DialogSetupDate">
+        <file alias="background">Dialog/SetupDate/background.png</file>
+        <file alias="cancel">Dialog/SetupDate/cancel.png</file>
+        <file alias="cancel_d">Dialog/SetupDate/cancel_d.png</file>
+        <file alias="colon">Dialog/SetupDate/colon.png</file>
+        <file alias="dash">Dialog/SetupDate/dash.png</file>
+        <file alias="day">Dialog/SetupDate/day.png</file>
+        <file alias="day_d">Dialog/SetupDate/day_d.png</file>
+        <file alias="ok">Dialog/SetupDate/ok.png</file>
+        <file alias="ok_d">Dialog/SetupDate/ok_d.png</file>
+        <file alias="year">Dialog/SetupDate/year.png</file>
+        <file alias="year_d">Dialog/SetupDate/year_d.png</file>
+    </qresource>
+    <qresource prefix="/DialogNumInput">
+        <file alias="0">Dialog/NumInput/0.png</file>
+        <file alias="0d">Dialog/NumInput/0d.png</file>
+        <file alias="1">Dialog/NumInput/1.png</file>
+        <file alias="1d">Dialog/NumInput/1d.png</file>
+        <file alias="2">Dialog/NumInput/2.png</file>
+        <file alias="2d">Dialog/NumInput/2d.png</file>
+        <file alias="3">Dialog/NumInput/3.png</file>
+        <file alias="3d">Dialog/NumInput/3d.png</file>
+        <file alias="4">Dialog/NumInput/4.png</file>
+        <file alias="4d">Dialog/NumInput/4d.png</file>
+        <file alias="5">Dialog/NumInput/5.png</file>
+        <file alias="5d">Dialog/NumInput/5d.png</file>
+        <file alias="6">Dialog/NumInput/6.png</file>
+        <file alias="6d">Dialog/NumInput/6d.png</file>
+        <file alias="7">Dialog/NumInput/7.png</file>
+        <file alias="7d">Dialog/NumInput/7d.png</file>
+        <file alias="8">Dialog/NumInput/8.png</file>
+        <file alias="8d">Dialog/NumInput/8d.png</file>
+        <file alias="9">Dialog/NumInput/9.png</file>
+        <file alias="9d">Dialog/NumInput/9d.png</file>
+        <file alias="background">Dialog/NumInput/background.png</file>
+        <file alias="cancel">Dialog/NumInput/cancel.png</file>
+        <file alias="cancel_d">Dialog/NumInput/cancel_d.png</file>
+        <file alias="delete">Dialog/NumInput/delete.png</file>
+        <file alias="delete_d">Dialog/NumInput/delete_d.png</file>
+        <file alias="input">Dialog/NumInput/input.png</file>
+        <file alias="yes">Dialog/NumInput/yes.png</file>
+        <file alias="yes_d">Dialog/NumInput/yes_d.png</file>
+        <file alias="100">Dialog/NumInput/100.png</file>
+        <file alias="100_d">Dialog/NumInput/100_d.png</file>
+    </qresource>
+    <qresource prefix="/DialogNotion">
+        <file alias="background">Dialog/Notion/background.png</file>
+        <file alias="yes">Dialog/Notion/yes.png</file>
+        <file alias="yes_d">Dialog/Notion/yes_d.png</file>
+    </qresource>
+    <qresource prefix="/SignalQualityWidget">
+        <file>SignalQualityWidget/label_background.png</file>
+        <file>SignalQualityWidget/measuring.png</file>
+        <file>SignalQualityWidget/measuring_press.png</file>
+        <file>SignalQualityWidget/z1_background.png</file>
+        <file>SignalQualityWidget/z2_background.png</file>
+        <file>SignalQualityWidget/z3_background.png</file>
+    </qresource>
+    <qresource prefix="/SetupWidget">
+        <file>SetupWidget/button_press.png</file>
+        <file>SetupWidget/hf_button.png</file>
+        <file>SetupWidget/sqi_button.png</file>
+        <file>SetupWidget/time_button.png</file>
+        <file>SetupWidget/_50hz_button.png</file>
+        <file>SetupWidget/sr_button.png</file>
+        <file>SetupWidget/label_button.png</file>
+        <file>SetupWidget/label_button_press.png</file>
+    </qresource>
+    <qresource prefix="/DialogPublic">
+        <file>DialogPublic/background.png</file>
+        <file>DialogPublic/cancel_button.png</file>
+        <file>DialogPublic/cancel_button_press.png</file>
+        <file>DialogPublic/ok_button.png</file>
+        <file>DialogPublic/ok_button_press.png</file>
+    </qresource>
+    <qresource prefix="/TrendWidget">
+        <file>TrendWidget/left.png</file>
+        <file>TrendWidget/left_press.png</file>
+        <file>TrendWidget/minus.png</file>
+        <file>TrendWidget/minus_press.png</file>
+        <file>TrendWidget/next.png</file>
+        <file>TrendWidget/next_press.png</file>
+        <file>TrendWidget/plus.png</file>
+        <file>TrendWidget/plus_press.png</file>
+        <file>TrendWidget/previous.png</file>
+        <file>TrendWidget/previous_press.png</file>
+        <file>TrendWidget/right.png</file>
+        <file>TrendWidget/right_press.png</file>
+        <file>TrendWidget/background.png</file>
+    </qresource>
+    <qresource prefix="/DialogAbout">
+        <file alias="update">Dialog/About/button.png</file>
+        <file alias="update_d">Dialog/About/button_d.png</file>
+    </qresource>
+    <qresource prefix="/DialogStringInput">
+        <file alias="background">Dialog/StringInput/background.png</file>
+        <file alias="backspace">Dialog/StringInput/backspace.png</file>
+        <file alias="backspace_d">Dialog/StringInput/backspace_d.png</file>
+        <file alias="cancel">Dialog/StringInput/cancel.png</file>
+        <file alias="cancel_d">Dialog/StringInput/cancel_d.png</file>
+        <file alias="Caps_lower">Dialog/StringInput/Caps_lower.png</file>
+        <file alias="Caps_lower_d">Dialog/StringInput/Caps_lower_d.png</file>
+        <file alias="Caps_upper">Dialog/StringInput/Caps_upper.png</file>
+        <file alias="Caps_upper_d">Dialog/StringInput/Caps_upper_d.png</file>
+        <file alias="clear">Dialog/StringInput/clear.png</file>
+        <file alias="clear_d">Dialog/StringInput/clear_d.png</file>
+        <file alias="empty">Dialog/StringInput/empty.png</file>
+        <file alias="empty_d">Dialog/StringInput/emptyd.png</file>
+        <file alias="num_limit">Dialog/StringInput/num_limit.png</file>
+        <file alias="space">Dialog/StringInput/space.png</file>
+        <file alias="space_d">Dialog/StringInput/space_d.png</file>
+        <file alias="yes">Dialog/StringInput/yes.png</file>
+        <file alias="yes_d">Dialog/StringInput/yes_d.png</file>
+    </qresource>
+</RCC>

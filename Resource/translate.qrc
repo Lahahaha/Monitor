@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/translate">
+        <file alias="EN">Translate/MOA_en.qm</file>
+        <file alias="CH">Translate/MOA_zh.qm</file>
+    </qresource>
+</RCC>
