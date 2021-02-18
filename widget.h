@@ -49,8 +49,6 @@ protected:
     void paintEvent(QPaintEvent *event);//<----------绘图事件
 
 private:
-
-    //设置窗口下方七个按键和电量显示
     CButton *firstButton;//用于切换窗口
     CButton *secondButton;//<------检测
     CButton *thirdButton;//<------设置按键
