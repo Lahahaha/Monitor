@@ -10,7 +10,6 @@ SignalQualityDialog::SignalQualityDialog(QWidget *parent) : QDialog(parent)
     setAttribute(Qt::WA_TranslucentBackground);
     pix.load(":/new/prefix1/Resource/Dialog/SetupDate/background.png");
     resize(pix.size());
-
     setModal(true);//设置为模态
     initButtons();
     initLabel();
@@ -27,9 +26,10 @@ void SignalQualityDialog::paintEvent(QPaintEvent *)
 void SignalQualityDialog::initButtons()
 {
 
+    setStyleSheet("color:white;");
     //关于对话框中的键
-    okButton = new QPushButton(this);//<------Ok键，按下关闭对话框
-    cancelButton = new QPushButton(this);//<-----升级键 按下输入密码
+    okButton = new QPushButton(this);
+    cancelButton = new QPushButton(this);
     measuringButton = new CButton(this);
 
     //设置关于对话框两个按键的位置
@@ -50,15 +50,10 @@ void SignalQualityDialog::initButtons()
     cancelButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/Dialog/SetupDate/cancel.png)}"
                               "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/Dialog/SetupDate/cancel_d.png)}");
 
-
-
 }
 
 void SignalQualityDialog::initLabel()
 {
-    QPalette textColor;
-    textColor.setColor(QPalette::WindowText, Qt::red);
-
 
     mHFLabel = new CButton(this);
     mHFLabel->set_button(HF_LABEL_POS_X, HF_LABEL_POS_Y);

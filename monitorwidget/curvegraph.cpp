@@ -13,13 +13,18 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
     mPlot->setBackground(QColor(20,20,20));
     mPlot->xAxis2->setTickPen(mcolor1);
     mPlot->xAxis2->setTickLabelColor(mcolor1);
+    mPlot->xAxis2->setVisible(true);
+    mPlot->xAxis2->setTickLabelSide(QCPAxis::LabelSide::lsInside);
+    mPlot->xAxis->grid()->setVisible(false);
+    mPlot->xAxis2->setSubTicks(false);
+
     mPlot->yAxis->setTickPen(mcolor1);
     mPlot->yAxis->setTickLabelColor(mcolor1);
     mPlot->yAxis->setTickLabelSide(QCPAxis::LabelSide::lsInside);
-    mPlot->xAxis2->setVisible(true);
-    mPlot->xAxis2->setTickLabelSide(QCPAxis::LabelSide::lsInside);
-
     mPlot->yAxis->setRange(0,100);
+    mPlot->yAxis->grid()->setVisible(false);
+    mPlot->yAxis->setSubTicks(false);
+
 
      // create graphs:
      mGraph = mPlot->addGraph(mPlot->xAxis2, mPlot->yAxis /*axisRect()->axis(QCPAxis::atLeft, 0)*/);
@@ -28,8 +33,6 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
      mDataTimer.start(20);
 
 
-     mPlot->yAxis->grid()->setVisible(false);
-     mPlot->xAxis->grid()->setVisible(false);
 
 
 }
