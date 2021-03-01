@@ -1,6 +1,6 @@
-#include "showvaluewideget.h"
+#include "valuewidget.h"
 
-ShowValueWideget::ShowValueWideget(QWidget *parent) : QWidget(parent)
+ValueWidget::ValueWidget(QWidget *parent) : QWidget(parent)
 {
     this->resize(250,600);
     move(690,70);
@@ -8,7 +8,7 @@ ShowValueWideget::ShowValueWideget(QWidget *parent) : QWidget(parent)
     setupAiname();
     setupEmgname();
 }
-void ShowValueWideget::setupAiname()
+void ValueWidget::setupAiname()
 {
     QLabel *nameLabel = new QLabel(this);
     nameLabel->move(5,5);
@@ -16,14 +16,14 @@ void ShowValueWideget::setupAiname()
     nameLabel->setText("AI");
 }
 
-void ShowValueWideget::setAidata(int data)
+void ValueWidget::setAidata(int data)
 {
     QLabel *dataLabel = new QLabel(this);
     dataLabel->move(85,100);
     dataLabel->setStyleSheet("QLabel{font:80pt;color:rgb(255,255,0)}");
     dataLabel->setText(QString::number(data));
 }
-void ShowValueWideget::setAidata()
+void ValueWidget::setAidata()
 {
     QLabel *dataLabel = new QLabel(this);
     dataLabel->move(85,100);
@@ -32,7 +32,7 @@ void ShowValueWideget::setAidata()
 }
 
 
-void ShowValueWideget::setupEmgname()
+void ValueWidget::setupEmgname()
 {
     QLabel *nameLabel = new QLabel(this);
     nameLabel->move(5,290);
@@ -40,14 +40,14 @@ void ShowValueWideget::setupEmgname()
     nameLabel->setText("EMG");
 }
 
-void ShowValueWideget::setEmgdata(int data)
+void ValueWidget::setEmgdata(int data)
 {
     QLabel *dataLabel = new QLabel(this);
     dataLabel->move(85,340);
     dataLabel->setStyleSheet("QLabel{font:60pt;color:rgb(0,0,255)}");
     dataLabel->setText(QString::number(data));
 }
-void ShowValueWideget::setEmgdata()
+void ValueWidget::setEmgdata()
 {
     QLabel *dataLabel = new QLabel(this);
     dataLabel->move(85,340);

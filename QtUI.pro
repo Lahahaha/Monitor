@@ -1,4 +1,4 @@
-QT       += core gui charts
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport serialport
 #printsupport
@@ -35,8 +35,8 @@ SOURCES += \
     setupwidget/setupwidget.cpp \
     signalqualitydialog/signalqualitydialog.cpp \
     statusbar/statsbar.cpp \
-    trendwidget/showvaluewideget.cpp \
     trendwidget/trendwidget.cpp \
+    trendwidget/valuewidget.cpp \
 
 HEADERS += \
     Com/cbutton.h \
@@ -56,8 +56,8 @@ HEADERS += \
     setupwidget/setupwidget.h \
     signalqualitydialog/signalqualitydialog.h \
     statusbar/statsbar.h \
-    trendwidget/showvaluewideget.h \
     trendwidget/trendwidget.h \
+    trendwidget/valuewidget.h \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

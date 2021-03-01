@@ -58,6 +58,7 @@ void SetupWidget::initlabels()
     m50HzButton = new CSwitch(this);
     mSRButton = new CSwitch(this);
     mSQIButton = new CSwitch(this);
+    mGraphLabel = new CButton(this);
 
     mHFButton->move(HF_BUTTON_POS_X,140);
     mHFButton->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/hf_button.png);}"
@@ -79,4 +80,9 @@ void SetupWidget::initlabels()
     mSQIButton->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/sqi_button.png);}"
                              "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
     mSQIButton->setText("SQI");
+
+    mGraphLabel->set_button(30,60);
+    mGraphLabel->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/label_button.png);}"
+                               "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/label_button_press.png)}");
+    mGraphLabel->setText("图像   ");
 }

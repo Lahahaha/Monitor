@@ -1,5 +1,5 @@
 #include "subchannelwidget.h"
-#include "widget.h"
+#include "mainwindow/widget.h"
 
 SubChannelWidget::SubChannelWidget(QWidget *parent) : QWidget(parent)
 {

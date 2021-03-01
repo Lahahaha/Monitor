@@ -57,36 +57,40 @@ void SignalQualityDialog::initButtons()
 void SignalQualityDialog::initLabel()
 {
     QPalette textColor;
-    textColor.setColor(QPalette::WindowText, Qt::white);
+    textColor.setColor(QPalette::WindowText, Qt::red);
 
 
     mHFLabel = new CButton(this);
     mHFLabel->set_button(HF_LABEL_POS_X, HF_LABEL_POS_Y);
     mHFLabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
+    mHFLabel->setText("HF        ");
 
 
     m50HzLabel = new CButton(this);
     m50HzLabel->set_button(_50HZ_LABEL_POS_X, _50HZ_LABEL_POS_Y);
     m50HzLabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
-
+    m50HzLabel->setText("50Hz        ");
 
 
     mESILabel = new CButton(this);
     mESILabel->set_button(ESI_LABEL_POS_X, ESI_LABEL_POS_Y);
     mESILabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
+    mESILabel->setText("ESI        ");
 
     mSQILabel = new CButton(this);
     mSQILabel->set_button(SQI_PERCENT_LABEL_POS_X, SQI_PERCENT_LABEL_POS_Y);
     mSQILabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
-
+    mSQILabel->setText("SQI         ");
 
     mZ1Label = new CButton(this);
     mZ1Label->set_button(Z1_LABEL_POS_X, Z1_LABEL_POS_Y);
     mZ1Label->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
+    mZ1Label->setText("Z1        ");
+
 
     mZ2Label = new CButton(this);
     mZ2Label->set_button(Z2_LABEL_POS_X, Z2_LABEL_POS_Y);
     mZ2Label->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
-
+    mZ2Label->setText("Z2        ");
 
 }
