@@ -1,9 +1,9 @@
 #ifndef TRENDWIDGET_H
 #define TRENDWIDGET_H
-#include "buttons/trendwidgetbuttons.h"
+#include "Com/trendwidgetbuttons.h"
 #include <QWidget>
 #include "trendwidget/showvaluewideget.h"
-#include "buttons/clabels.h"
+#include "Com/clabels.h"
 class TrendWidget : public QWidget
 {
     Q_OBJECT
@@ -13,7 +13,6 @@ public:
 
 private:
 
-    //趋势中显示数值的俩窗口
     ShowValueWideget *ai;
     ShowValueWideget *emg;
 

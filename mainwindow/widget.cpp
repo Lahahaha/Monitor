@@ -17,7 +17,6 @@ Widget::Widget(QWidget *parent)
     initButtons();
 
 //添加界面元素
-//    multi = new MultipWidget(widget2);
     s  = new StatusBar(this);  
     monitor = new MonitorWidget(widget1);
     aboutDialog = new AboutDialog(this);
@@ -91,8 +90,7 @@ void Widget::initButtons()
     battery = new CButton(this);
 
     firstButton->move(0,640);
-    firstButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/MainWindow/1/home.png)}"
-                              "QPushButton:checked{border-image: url(:/new/prefix1/Resource/MainWindow/1/home_press.png)}");
+    firstButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/MainWindow/1/home.png)}");
 
     secondButton->move(96,640);
     secondButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/MainWindow/1/monitoring.png)}"
@@ -145,7 +143,7 @@ void Widget::changeWidget()
     QPushButton *button = qobject_cast<QPushButton*>(sender());
     if(button == firstButton)
     {
-        stackedwidget->setCurrentIndex(1);
+//        stackedwidget->setCurrentIndex(1);
     }
     else if(button == secondButton)
     {

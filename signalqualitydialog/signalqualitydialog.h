@@ -1,13 +1,6 @@
 #ifndef SIGNALQUALITYDIALOG_H
 #define SIGNALQUALITYDIALOG_H
 
-#include <QDialog>
-#include <QPushButton>
-#include <QPixmap>
-#include <QPainter>
-#include "buttons/cbutton.h"
-#include <QLabel>
-
 #define OK_BUTTON_POS_X             (93)
 #define OK_BUTTON_POS_Y             (614)
 #define CANCEL_BUTTON_POS_X         (829)
@@ -15,10 +8,6 @@
 #define MEASURING_BUTTON_POS_X      (200)
 #define MEASURING_BUTTON_POS_Y      (160)
 
-#define TITLE_LABEL_POS_X           (387)
-#define TITLE_LABEL_POS_Y           (8)
-#define TITLE_LABEL_WIDTH           (250)
-#define TITLE_LABEL_HEIGHT          (39)
 #define HF_LABEL_POS_X              (30)
 #define HF_LABEL_POS_Y              (40)
 #define _50HZ_LABEL_POS_X           (30)
@@ -38,6 +27,13 @@
 #define LABEL_DATA_POS_Y            (0)
 #define LABEL_DATA_WIDTH            (173)
 #define LABEL_DATA_HEIGHT           (86)
+
+#include <QDialog>
+#include <QPushButton>
+#include <QPixmap>
+#include <QPainter>
+#include <QLabel>
+#include "Com/cbutton.h"
 
 class SignalQualityDialog : public QDialog
 {

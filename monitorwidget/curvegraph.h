@@ -2,7 +2,7 @@
 #define CURVEGRAPH_H
 
 #include <QWidget>
-#include "qcustomplot.h"
+#include "qcustomplot/qcustomplot.h"
 class CurveGraph : public QWidget
 {
     Q_OBJECT

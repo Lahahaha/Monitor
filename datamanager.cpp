@@ -7,10 +7,6 @@ DataManager::DataManager(QObject *parent) : QObject(parent)
 //    connect(this->serial,SIGNAL(readyRead()),this,SLOT(resolveDataFromSerialport()));
     QList<QSerialPortInfo> serialPortInfos = QSerialPortInfo::availablePorts();
     qDebug() << "Total numbers of ports: " << serialPortInfos.count();
-
-
-
-
 }
 
 

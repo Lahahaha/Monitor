@@ -10,6 +10,7 @@ SetupWidget::SetupWidget(QWidget *parent) : QDialog(parent)
 
     setModal(true);//设置为模态
     initButtons();
+    initlabels();
     connect(okButton,&QPushButton::clicked,this,&SetupWidget::okButton_clicked);
     connect(cancelButton,&QPushButton::clicked,this,&SetupWidget::cancelButton_clicked);
 
@@ -44,11 +45,38 @@ void SetupWidget::initButtons()
     okButton->resize(37,37);
     cancelButton->resize(37,37);
 
-//    okButton->setText("OK");
-//    cancelButton->setText("Cancel");
     okButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/Dialog/SetupDate/ok.png)}"
                               "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/Dialog/SetupDate/ok_d.png)}");
     cancelButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/Dialog/SetupDate/cancel.png)}"
                               "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/Dialog/SetupDate/cancel_d.png)}");
 
+}
+
+void SetupWidget::initlabels()
+{
+    mHFButton = new CSwitch(this);
+    m50HzButton = new CSwitch(this);
+    mSRButton = new CSwitch(this);
+    mSQIButton = new CSwitch(this);
+
+    mHFButton->move(HF_BUTTON_POS_X,140);
+    mHFButton->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/hf_button.png);}"
+                             "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
+    mHFButton->setText("HF");
+
+    m50HzButton->move(_50HZ_BUTTON_POS_X,140);
+    m50HzButton->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/_50hz_button.png);}"
+                             "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
+    m50HzButton->setText("50HZ");
+
+    mSRButton->move(SR_BUTTON_POS_X,140);
+
+    mSRButton->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/sr_button.png);}"
+                             "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
+    mSRButton->setText("SR");
+
+    mSQIButton->move(SQI_BUTTON_POS_X,140);
+    mSQIButton->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/sqi_button.png);}"
+                             "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
+    mSQIButton->setText("SQI");
 }

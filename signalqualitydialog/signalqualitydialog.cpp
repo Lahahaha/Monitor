@@ -63,140 +63,30 @@ void SignalQualityDialog::initLabel()
     mHFLabel = new CButton(this);
     mHFLabel->set_button(HF_LABEL_POS_X, HF_LABEL_POS_Y);
     mHFLabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
-//    mHFLabel->setButtonLabel("HF(dB)" + LABEL_OFFSET_SPACE,
-//                             LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mHFLabel->setButtonTextSize(25*SCALE_VALUE);
-//    mHFLabel->set_click_enable(false);
+
 
     m50HzLabel = new CButton(this);
     m50HzLabel->set_button(_50HZ_LABEL_POS_X, _50HZ_LABEL_POS_Y);
     m50HzLabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
 
-//    m50HzLabel->setButtonLabel("50Hz(dB)" + LABEL_OFFSET_SPACE,
-//                             LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    m50HzLabel->setButtonTextSize(25*SCALE_VALUE);
-//    m50HzLabel->set_click_enable(false);
+
 
     mESILabel = new CButton(this);
     mESILabel->set_button(ESI_LABEL_POS_X, ESI_LABEL_POS_Y);
     mESILabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
 
-//    mESILabel->setButtonLabel("ESI(dB)" + LABEL_OFFSET_SPACE,
-//                             LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mESILabel->setButtonTextSize(25*SCALE_VALUE);
-//    mESILabel->set_click_enable(false);
-
     mSQILabel = new CButton(this);
     mSQILabel->set_button(SQI_PERCENT_LABEL_POS_X, SQI_PERCENT_LABEL_POS_Y);
     mSQILabel->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
 
-//    mSQILabel->setButtonLabel("SQI(%)" + LABEL_OFFSET_SPACE,
-//                             LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mSQILabel->setButtonTextSize(25*SCALE_VALUE);
-//    mSQILabel->set_click_enable(false);
 
     mZ1Label = new CButton(this);
     mZ1Label->set_button(Z1_LABEL_POS_X, Z1_LABEL_POS_Y);
     mZ1Label->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
 
-//    mZ1Label->setButtonLabel("Z1" + LABEL_OFFSET_SPACE,
-//                             LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mZ1Label->setButtonTextSize(25*SCALE_VALUE);
-//    mZ1Label->set_click_enable(false);
-
     mZ2Label = new CButton(this);
     mZ2Label->set_button(Z2_LABEL_POS_X, Z2_LABEL_POS_Y);
     mZ2Label->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
 
-//    mZ2Label->setButtonLabel("Z2" + LABEL_OFFSET_SPACE,
-//                             LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mZ2Label->setButtonTextSize(25*SCALE_VALUE);
-//    mZ2Label->set_click_enable(false);
 
-    mZ3Label = new CButton(this);
-    mZ3Label->set_button(Z3_LABEL_POS_X, Z3_LABEL_POS_Y);
-    mZ3Label->setStyleSheet("QPushButton{border-image: url(:/SignalQualityWidget/Resource/SignalQualityWidget/label_background.png)}");
-
-//    mZ3Label->setButtonLabel("Z3" + LABEL_OFFSET_SPACE,
-//                             LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mZ3Label->setButtonTextSize(25*SCALE_VALUE);
-//    mZ3Label->set_click_enable(false);
-
-
-//    mHFLabelData = new QLabel(mHFLabel);
-//    mHFLabelData->setGeometry(LABEL_DATA_POS_X*SCALE_VALUE,
-//                              LABEL_DATA_POS_Y*SCALE_VALUE,
-//                              LABEL_DATA_WIDTH*SCALE_VALUE,
-//                              LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mHFLabelData->setText("0");
-//    mHFLabelData->setFont(textFont);
-//    mHFLabelData->setPalette(textColor);
-//    mHFLabelData->setAlignment(Qt::AlignCenter);
-//    mHFLabelData->show();
-
-//    m50HzLabelData = new QLabel(m50HzLabel);
-//    m50HzLabelData->setGeometry(LABEL_DATA_POS_X*SCALE_VALUE,
-//                                LABEL_DATA_POS_Y*SCALE_VALUE,
-//                                LABEL_DATA_WIDTH*SCALE_VALUE,
-//                                LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    m50HzLabelData->setText("0");
-//    m50HzLabelData->setFont(textFont);
-//    m50HzLabelData->setPalette(textColor);
-//    m50HzLabelData->setAlignment(Qt::AlignCenter);
-//    m50HzLabelData->show();
-
-//    mESILabelData = new QLabel(mESILabel);
-//    mESILabelData->setGeometry(LABEL_DATA_POS_X*SCALE_VALUE,
-//                               LABEL_DATA_POS_Y*SCALE_VALUE,
-//                               LABEL_DATA_WIDTH*SCALE_VALUE,
-//                               LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mESILabelData->setText("0");
-//    mESILabelData->setFont(textFont);
-//    mESILabelData->setPalette(textColor);
-//    mESILabelData->setAlignment(Qt::AlignCenter);
-//    mESILabelData->show();
-
-//    mSQILabelData = new QLabel(mSQILabel);
-//    mSQILabelData->setGeometry(LABEL_DATA_POS_X*SCALE_VALUE,
-//                               LABEL_DATA_POS_Y*SCALE_VALUE,
-//                               LABEL_DATA_WIDTH*SCALE_VALUE,
-//                               LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mSQILabelData->setText("0");
-//    mSQILabelData->setFont(textFont);
-//    mSQILabelData->setPalette(textColor);
-//    mSQILabelData->setAlignment(Qt::AlignCenter);
-//    mSQILabelData->show();
-
-//    mZ1LabelData = new QLabel(mZ1Label);
-//    mZ1LabelData->setGeometry(LABEL_DATA_POS_X*SCALE_VALUE,
-//                              LABEL_DATA_POS_Y*SCALE_VALUE,
-//                              LABEL_DATA_WIDTH*SCALE_VALUE,
-//                              LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mZ1LabelData->setText("0");
-//    mZ1LabelData->setFont(textFont);
-//    mZ1LabelData->setPalette(textColor);
-//    mZ1LabelData->setAlignment(Qt::AlignCenter);
-//    mZ1LabelData->show();
-
-//    mZ2LabelData = new QLabel(mZ2Label);
-//    mZ2LabelData->setGeometry(LABEL_DATA_POS_X*SCALE_VALUE,
-//                              LABEL_DATA_POS_Y*SCALE_VALUE,
-//                              LABEL_DATA_WIDTH*SCALE_VALUE,
-//                              LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mZ2LabelData->setText("0");
-//    mZ2LabelData->setFont(textFont);
-//    mZ2LabelData->setPalette(textColor);
-//    mZ2LabelData->setAlignment(Qt::AlignCenter);
-//    mZ2LabelData->show();
-
-//    mZ3LabelData = new QLabel(mZ3Label);
-//    mZ3LabelData->setGeometry(LABEL_DATA_POS_X*SCALE_VALUE,
-//                              LABEL_DATA_POS_Y*SCALE_VALUE,
-//                              LABEL_DATA_WIDTH*SCALE_VALUE,
-//                              LABEL_DATA_HEIGHT*SCALE_VALUE);
-//    mZ3LabelData->setText("0");
-//    mZ3LabelData->setFont(textFont);
-//    mZ3LabelData->setPalette(textColor);
-//    mZ3LabelData->setAlignment(Qt::AlignCenter);
-//    mZ3LabelData->show();
 }

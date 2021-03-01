@@ -3,9 +3,8 @@
 #include "datamanager.h"
 
 #include "statusbar/statsbar.h"
-#include "buttons/cbutton.h"
-#include "buttons/menu.h"
-#include "multipwidgets/multipwidget.h"
+#include "Com/cbutton.h"
+#include "Com/menu.h"
 #include "aboutwidget/aboutdialog.h"
 #include "signalqualitydialog/signalqualitydialog.h"
 #include "trendwidget/trendwidget.h"
@@ -13,8 +12,6 @@
 #include "monitorwidget/monitorwidget.h"
 #include <QStackedWidget>
 #include <QOpenGLWidget>
-
-using namespace QtCharts;
 
 class Widget : public QWidget
 {
@@ -27,7 +24,6 @@ public:
     //各个模块
     StatusBar *s;
 
-    MultipWidget *multi;
     Menu *menu;
     MonitorWidget *monitor;
     AboutDialog *aboutDialog;
