@@ -84,5 +84,5 @@ void SetupWidget::initlabels()
     mGraphLabel->set_button(30,60);
     mGraphLabel->setStyleSheet("QPushButton{color:rgb(255,255,255);border-image: url(:/new/prefix1/Resource/SetupWidget/label_button.png);}"
                                "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/label_button_press.png)}");
-    mGraphLabel->setText("图像   ");
+    mGraphLabel->setText("图像       ");
 }
