@@ -42,6 +42,9 @@ public:
     explicit SignalQualityDialog(QWidget *parent = nullptr);
 
 signals:
+private slots:
+
+
 private:
     void initButtons();
     void initLabel();

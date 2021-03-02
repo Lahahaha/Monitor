@@ -1,5 +1,5 @@
 
-
+#include <QDebug>
 #include "signalqualitydialog.h"
 
 SignalQualityDialog::SignalQualityDialog(QWidget *parent) : QDialog(parent)
@@ -33,7 +33,7 @@ void SignalQualityDialog::initButtons()
     measuringButton = new CButton(this);
 
     //设置关于对话框两个按键的位置
-    okButton->move(100,200);
+    okButton->move(30,200);
     cancelButton->move(250,200);
 
     okButton->resize(37,37);
