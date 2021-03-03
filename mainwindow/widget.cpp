@@ -111,7 +111,6 @@ void Widget::initButtons()
     battery->move(680,640);
     battery->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/MainWindow/power_5.png)}");
 
-    connect(firstButton,&CButton::clicked,this,&Widget::changeWidget);
     connect(secondButton,&CButton::clicked,this,&Widget::changeWidget);
     connect(trendButton,&CButton::clicked,this,&Widget::changeWidget);
 
@@ -128,19 +127,13 @@ void Widget::initButtons()
 void Widget::changeWidget()
 {
     QPushButton *button = qobject_cast<QPushButton*>(sender());
-    if(button == firstButton)
+    if(button == secondButton)
     {
-//        stackedwidget->setCurrentIndex(1);
-    }
-    else if(button == secondButton)
-    {
-//        stackedwidget->setCurrentIndex(0);
         monitor->show();
         trend->hide();
     }
     else if(button == trendButton)
     {
-//        stackedwidget->setCurrentIndex(2);
         trend->show();
         monitor->hide();
     }
