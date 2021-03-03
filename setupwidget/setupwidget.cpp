@@ -72,27 +72,37 @@ void SetupWidget::initlabels()
     mTimeLabel = new CButton(this);
 
     mHFButton->move(HF_BUTTON_POS_X,SWITCH_BUTTON_Y);
-    mHFButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/SetupWidget/hf_button.png);}"
-                             "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
+    mHFButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/SetupWidget/hf_button.png);}");
     mHFButton->setId(SetupWidget::HF);
     mHFButton->setText("HF");
-    connect(mHFButton,SIGNAL(mSignal(int)),this,SLOT(slotSwitch(int)));
+    mHFButton->setimages(":/new/prefix1/Resource/SetupWidget/hf_button.png",
+                         ":/new/prefix1/Resource/SetupWidget/button_press.png");
 
     m50HzButton->move(_50HZ_BUTTON_POS_X,SWITCH_BUTTON_Y);
     m50HzButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/SetupWidget/_50hz_button.png);}"
                              "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
     m50HzButton->setText("50Hz");
+    m50HzButton->setId(SetupWidget::_50Hz);
+
 
     mSRButton->move(SR_BUTTON_POS_X,SWITCH_BUTTON_Y);
 
     mSRButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/SetupWidget/sr_button.png);}"
                              "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
     mSRButton->setText("SR");
+    mSRButton->setId(SetupWidget::SR);
+
 
     mSQIButton->move(SQI_BUTTON_POS_X,SWITCH_BUTTON_Y);
     mSQIButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/SetupWidget/sqi_button.png);}"
                              "QPushButton:pressed{border-image: url(:/new/prefix1/Resource/SetupWidget/button_press.png)}");
     mSQIButton->setText("SQI");
+    mSQIButton->setId(SetupWidget::SQI);
+
+    connect(mHFButton,SIGNAL(mSignal(int)),this,SLOT(slotSwitch(int)));
+    connect(m50HzButton,SIGNAL(mSignal(int)),this,SLOT(slotSwitch(int)));
+    connect(mSRButton,SIGNAL(mSignal(int)),this,SLOT(slotSwitch(int)));
+    connect(mSQIButton,SIGNAL(mSignal(int)),this,SLOT(slotSwitch(int)));
 
     mGraphLabel->set_button(30,50);
     mGraphLabel->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/SetupWidget/label_button.png);}"
@@ -120,8 +130,16 @@ void SetupWidget::slotSwitch(int id)
 {
     switch (id){
     case SetupWidget::HF:
-        qDebug()<<"可以了";
+        qDebug()<<"HF";
         break;
+    case SetupWidget::_50Hz:
+        qDebug()<<"50Hz";
+        break;
+    case SetupWidget::SR:
+        qDebug()<<"SR";
+        break;
+    case SetupWidget::SQI:
+        qDebug()<<"SQI";
     default:
         break;
     }

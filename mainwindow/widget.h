@@ -4,7 +4,6 @@
 
 #include "statusbar/statsbar.h"
 #include "Com/cbutton.h"
-#include "Com/menu.h"
 #include "aboutwidget/aboutdialog.h"
 #include "signalqualitydialog/signalqualitydialog.h"
 #include "trendwidget/trendwidget.h"
@@ -24,7 +23,6 @@ public:
     //各个模块
     StatusBar *s;
 
-    Menu *menu;
     MonitorWidget *monitor;
     AboutDialog *aboutDialog;
     SignalQualityDialog *sqlDialog;
