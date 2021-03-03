@@ -20,7 +20,6 @@ SOURCES += \
     Com/cbutton.cpp \
     Com/clabels.cpp \
     Com/cswitch.cpp \
-    Com/menu.cpp \
     Com/trendwidgetbuttons.cpp \
     aboutwidget/aboutdialog.cpp \
     main.cpp \
@@ -42,7 +41,6 @@ HEADERS += \
     Com/cbutton.h \
     Com/clabels.h \
     Com/cswitch.h \
-    Com/menu.h \
     Com/trendwidgetbuttons.h \
     aboutwidget/aboutdialog.h \
     mainwindow/widget.h \
