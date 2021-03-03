@@ -6,9 +6,13 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
 
     mPlot = new QCustomPlot(this);
     setposition_and_size(2,51,579,276);
-
     mPlot->axisRect()->setAutoMargins(QCP::msNone);
-     // 配置背景、坐标轴、标签的颜色:
+
+    QSharedPointer<QCPAxisTickerDateTime> dateTicker(new QCPAxisTickerDateTime);
+    dateTicker->setDateTimeFormat("hh:mm");
+    dateTicker->setTickCount(2);
+    mPlot->xAxis2->setTicker(dateTicker);
+
     QColor mcolor1 = QColor(166,222,255);
     mPlot->setBackground(QColor(20,20,20));
     mPlot->xAxis2->setTickPen(mcolor1);
@@ -24,6 +28,7 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
     mPlot->yAxis->setRange(0,100);
     mPlot->yAxis->grid()->setVisible(false);
     mPlot->yAxis->setSubTicks(false);
+
 
 
      // create graphs:
