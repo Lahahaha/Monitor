@@ -1,6 +1,5 @@
 #ifndef WIDGET_H
 #define WIDGET_H
-#include "datamanager.h"
 
 #include "statusbar/statsbar.h"
 #include "Com/cbutton.h"
@@ -9,8 +8,6 @@
 #include "trendwidget/trendwidget.h"
 #include "setupwidget/setupwidget.h"
 #include "monitorwidget/monitorwidget.h"
-#include <QStackedWidget>
-#include <QOpenGLWidget>
 
 class Widget : public QWidget
 {
@@ -60,7 +57,6 @@ private:
     QLabel *timeLabel;
 
     void initLayout();//全局颜色
-    void addWidgets();//添加三个OpenGL窗口
 
 public slots:
 

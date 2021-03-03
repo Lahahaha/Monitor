@@ -5,7 +5,7 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
 {
 
     mPlot = new QCustomPlot(this);
-    setposition_and_size(2,51,579,276);
+    setposition_and_size(2,51,596,276);
     mPlot->axisRect()->setAutoMargins(QCP::msNone);
 
     QSharedPointer<QCPAxisTickerDateTime> dateTicker(new QCPAxisTickerDateTime);

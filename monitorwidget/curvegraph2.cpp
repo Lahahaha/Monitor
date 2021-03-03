@@ -3,7 +3,7 @@
 CurveGraph2::CurveGraph2(QWidget *parent) : QWidget(parent)
 {
     mPlot = new QCustomPlot(this);
-    setposition_and_size(2,329,585,168);
+    setposition_and_size(2,329,596,168);
 
     mPlot->axisRect()->setAutoMargins(QCP::msNone);
      // 配置背景、坐标轴、标签的颜色:
