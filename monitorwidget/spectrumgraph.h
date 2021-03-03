@@ -2,7 +2,7 @@
 #define SPECTRUMGRAPH_H
 
 #include <QWidget>
-#include "qcustomplot.h"
+#include "qcustomplot/qcustomplot.h"
 
 class SpectrumGraph : public QWidget
 {

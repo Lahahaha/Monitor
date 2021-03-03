@@ -20,7 +20,7 @@ private:
 
 
 private slots:
-    //更新时间
+
     void timeUpdate();
 };
 #endif // STATSBAR_H

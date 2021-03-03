@@ -1,20 +1,13 @@
 #ifndef WIDGET_H
 #define WIDGET_H
-#include "datamanager.h"
 
 #include "statusbar/statsbar.h"
-#include "buttons/cbutton.h"
-#include "buttons/menu.h"
-#include "multipwidgets/multipwidget.h"
+#include "Com/cbutton.h"
 #include "aboutwidget/aboutdialog.h"
 #include "signalqualitydialog/signalqualitydialog.h"
 #include "trendwidget/trendwidget.h"
 #include "setupwidget/setupwidget.h"
 #include "monitorwidget/monitorwidget.h"
-#include <QStackedWidget>
-#include <QOpenGLWidget>
-
-using namespace QtCharts;
 
 class Widget : public QWidget
 {
@@ -27,8 +20,6 @@ public:
     //各个模块
     StatusBar *s;
 
-    MultipWidget *multi;
-    Menu *menu;
     MonitorWidget *monitor;
     AboutDialog *aboutDialog;
     SignalQualityDialog *sqlDialog;
@@ -36,12 +27,10 @@ public:
     SetupWidget *setupwidget;
 
 
-
     QStackedWidget *stackedwidget;
     QOpenGLWidget *widget1;
     QOpenGLWidget *widget2;
     QOpenGLWidget *widget3;
-
 
 
 
@@ -68,7 +57,6 @@ private:
     QLabel *timeLabel;
 
     void initLayout();//全局颜色
-    void addWidgets();//添加三个OpenGL窗口
 
 public slots:
 

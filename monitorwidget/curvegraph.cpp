@@ -5,21 +5,31 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
 {
 
     mPlot = new QCustomPlot(this);
-    setposition_and_size(2,51,579,276);
-
+    setposition_and_size(2,51,596,276);
     mPlot->axisRect()->setAutoMargins(QCP::msNone);
-     // 配置背景、坐标轴、标签的颜色:
+
+    QSharedPointer<QCPAxisTickerDateTime> dateTicker(new QCPAxisTickerDateTime);
+    dateTicker->setDateTimeFormat("hh:mm");
+    dateTicker->setTickCount(2);
+    mPlot->xAxis2->setTicker(dateTicker);
+
     QColor mcolor1 = QColor(166,222,255);
     mPlot->setBackground(QColor(20,20,20));
     mPlot->xAxis2->setTickPen(mcolor1);
     mPlot->xAxis2->setTickLabelColor(mcolor1);
+    mPlot->xAxis2->setVisible(true);
+    mPlot->xAxis2->setTickLabelSide(QCPAxis::LabelSide::lsInside);
+    mPlot->xAxis->grid()->setVisible(false);
+    mPlot->xAxis2->setSubTicks(false);
+
     mPlot->yAxis->setTickPen(mcolor1);
     mPlot->yAxis->setTickLabelColor(mcolor1);
     mPlot->yAxis->setTickLabelSide(QCPAxis::LabelSide::lsInside);
-    mPlot->xAxis2->setVisible(true);
-    mPlot->xAxis2->setTickLabelSide(QCPAxis::LabelSide::lsInside);
-
     mPlot->yAxis->setRange(0,100);
+    mPlot->yAxis->grid()->setVisible(false);
+    mPlot->yAxis->setSubTicks(false);
+
+
 
      // create graphs:
      mGraph = mPlot->addGraph(mPlot->xAxis2, mPlot->yAxis /*axisRect()->axis(QCPAxis::atLeft, 0)*/);
@@ -28,8 +38,6 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
      mDataTimer.start(20);
 
 
-     mPlot->yAxis->grid()->setVisible(false);
-     mPlot->xAxis->grid()->setVisible(false);
 
 
 }

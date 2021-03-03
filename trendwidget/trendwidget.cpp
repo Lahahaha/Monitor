@@ -7,12 +7,13 @@ TrendWidget::TrendWidget(QWidget *parent) : QWidget(parent)
     frame->setObjectName("myframe");
     frame->resize(960,720);
     frame->setStyleSheet("QFrame#myframe{border-image:url(:/new/prefix1/Resource/MainWindow/background.jpg)}");
-    ai = new ShowValueWideget(this);
+    ai = new ValueWidget(this);
     ai->setAidata();
-    emg = new ShowValueWideget(this);
+    emg = new ValueWidget(this);
     emg->setEmgdata();
     initbuttons();
     setlabels();
+    initcurvegraph();
 }
 void TrendWidget::initbuttons()
 {
@@ -55,4 +56,46 @@ void TrendWidget::setlabels()
     startTimeLabel->setText("-");
     lenth->move(700,615);
     lenth->setText("时长");
+}
+
+void TrendWidget::initcurvegraph()
+{
+    curveplot = new QCustomPlot(this);
+    curveplot->setGeometry(GRAPH_POS_X,GRAPH_POS_Y,GRAPH_WIDTH,GRAPH_HIGHT);
+    curveplot->setBackground(QBrush(Qt::black));
+    curveplot->xAxis->setVisible(false);
+    curveplot->xAxis2->setVisible(true);
+    curveplot->axisRect()->setAutoMargins(QCP::msNone);
+    curveplot->xAxis2->grid()->setVisible(false);
+    curveplot->xAxis2->setTickLabelSide(QCPAxis::lsInside);
+    curveplot->xAxis2->setSubTicks(false);
+    curveplot->xAxis2->setTickLabelColor(QColor(166,222,255));
+    curveplot->xAxis2->setTickPen(QColor(166,222,255));
+
+    QSharedPointer<QCPAxisTickerDateTime> dateTicker(new QCPAxisTickerDateTime);
+    dateTicker->setDateTimeFormat("hh:mm");
+    dateTicker->setTickCount(2);
+    curveplot->xAxis2->setTicker(dateTicker);
+
+    curveplot->yAxis->grid()->setVisible(false);
+    curveplot->yAxis->setSubTicks(false);
+    curveplot->yAxis->setRange(0,100);
+    curveplot->yAxis->setTickLabelColor(QColor(166,222,255));
+    curveplot->yAxis->setTickPen(QColor(166,222,255));
+
+
+
+    curveplot2 = new QCustomPlot(this);
+    curveplot2->setGeometry(GRAPH2_POS_X,GRAPH2_POS_Y,GRAPH_WIDTH,GRAPH2_HIGHT);
+    curveplot2->setBackground(QBrush(Qt::black));
+    curveplot2->xAxis->setVisible(false);
+    curveplot2->axisRect()->setAutoMargins(QCP::msNone);
+    curveplot2->xAxis->grid()->setVisible(false);
+
+    curveplot2->yAxis->grid()->setVisible(false);
+    curveplot2->yAxis->setTickLabelSide(QCPAxis::lsInside);
+    curveplot2->yAxis->setRange(0,100);
+    curveplot2->yAxis->setTickPen(QColor(166,222,255));
+    curveplot->yAxis->setTickLabelColor(QColor(166,222,255));
+
 }

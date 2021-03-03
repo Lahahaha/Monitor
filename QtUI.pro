@@ -1,4 +1,4 @@
-QT       += core gui charts
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport serialport
 #printsupport
@@ -17,59 +17,45 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Com/cbutton.cpp \
+    Com/clabels.cpp \
+    Com/cswitch.cpp \
+    Com/trendwidgetbuttons.cpp \
     aboutwidget/aboutdialog.cpp \
-    buttons/cbutton.cpp \
-    buttons/clabels.cpp \
-    buttons/trendwidgetbuttons.cpp \
-    datamanager.cpp \
     main.cpp \
+    mainwindow/widget.cpp \
     monitorwidget/curvegraph.cpp \
     monitorwidget/curvegraph2.cpp \
     monitorwidget/mainchannelwidget.cpp \
     monitorwidget/monitorwidget.cpp \
     monitorwidget/spectrumgraph.cpp \
     monitorwidget/subchannelwidget.cpp \
-    multipwidgets/ecg.cpp \
-    multipwidgets/heartrate.cpp \
-    multipwidgets/mchart.cpp \
-    multipwidgets/multipwidget.cpp \
-    multipwidgets/respgraph.cpp \
-    multipwidgets/spo2widget.cpp \
-    multipwidgets/temperature.cpp \
-    qcustomplot.cpp \
+    qcustomplot/qcustomplot.cpp \
     setupwidget/setupwidget.cpp \
     signalqualitydialog/signalqualitydialog.cpp \
     statusbar/statsbar.cpp \
-    trendwidget/showvaluewideget.cpp \
     trendwidget/trendwidget.cpp \
-    widget.cpp
+    trendwidget/valuewidget.cpp \
 
 HEADERS += \
+    Com/cbutton.h \
+    Com/clabels.h \
+    Com/cswitch.h \
+    Com/trendwidgetbuttons.h \
     aboutwidget/aboutdialog.h \
-    buttons/cbutton.h \
-    buttons/clabels.h \
-    buttons/trendwidgetbuttons.h \
-    datamanager.h \
+    mainwindow/widget.h \
     monitorwidget/curvegraph.h \
     monitorwidget/curvegraph2.h \
     monitorwidget/mainchannelwidget.h \
     monitorwidget/monitorwidget.h \
     monitorwidget/spectrumgraph.h \
     monitorwidget/subchannelwidget.h \
-    multipwidgets/ecg.h \
-    multipwidgets/heartrate.h \
-    multipwidgets/mchart.h \
-    multipwidgets/multipwidget.h \
-    multipwidgets/respgraph.h \
-    multipwidgets/spo2widget.h \
-    multipwidgets/temperature.h \
-    qcustomplot.h \
+    qcustomplot/qcustomplot.h \
     setupwidget/setupwidget.h \
     signalqualitydialog/signalqualitydialog.h \
     statusbar/statsbar.h \
-    trendwidget/showvaluewideget.h \
     trendwidget/trendwidget.h \
-    widget.h
+    trendwidget/valuewidget.h \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

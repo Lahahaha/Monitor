@@ -3,11 +3,11 @@
 
 #include <QWidget>
 #include <QLabel>
-class ShowValueWideget : public QWidget
+class ValueWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ShowValueWideget(QWidget *parent = nullptr);
+    explicit ValueWidget(QWidget *parent = nullptr);
 
 
 private:

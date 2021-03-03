@@ -1,9 +1,20 @@
 #ifndef TRENDWIDGET_H
 #define TRENDWIDGET_H
-#include "buttons/trendwidgetbuttons.h"
+
+#define GRAPH_POS_X     (2)
+#define GRAPH_POS_Y     (46)
+#define GRAPH2_POS_X    (2)
+#define GRAPH2_POS_Y    (343)
+#define GRAPH_WIDTH     (662)
+#define GRAPH_HIGHT     (295)
+#define GRAPH2_HIGHT     (176)
+
+
+#include "Com/trendwidgetbuttons.h"
 #include <QWidget>
-#include "trendwidget/showvaluewideget.h"
-#include "buttons/clabels.h"
+#include "trendwidget/valuewidget.h"
+#include "Com/clabels.h"
+#include "qcustomplot/qcustomplot.h"
 class TrendWidget : public QWidget
 {
     Q_OBJECT
@@ -13,9 +24,8 @@ public:
 
 private:
 
-    //趋势中显示数值的俩窗口
-    ShowValueWideget *ai;
-    ShowValueWideget *emg;
+    ValueWidget *ai;
+    ValueWidget *emg;
 
     //控制按键
     void initbuttons();
@@ -29,14 +39,14 @@ private:
     //参数信息
     void setlabels();
     CLabels *previousTrend;
-//    CLabels *previousTrend_Amount;
-//    CLabels *timeticks;
     CLabels *currentTrend;
-//    CLabels *currentTrend_Num;
     CLabels *startTimeLabel;
-//    CLabels *startTime;
     CLabels *lenth;
-//    CLabels *lenth_Num;
+
+    void initcurvegraph();
+    QCustomPlot *curveplot;
+    QCustomPlot *curveplot2;
+
 
 signals:
 

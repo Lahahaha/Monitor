@@ -12,49 +12,35 @@ Widget::Widget(QWidget *parent)
     : QWidget(parent)
 {
 //    DataManager *por = new DataManager;
-    addWidgets();
-    initLayout();
-    initButtons();
+//    addWidgets();
+
+
 
 //添加界面元素
-//    multi = new MultipWidget(widget2);
-    s  = new StatusBar(this);  
-    monitor = new MonitorWidget(widget1);
+    monitor = new MonitorWidget(this);
     aboutDialog = new AboutDialog(this);
     sqlDialog = new SignalQualityDialog(this);
     setupwidget = new SetupWidget(this);
-    trend = new TrendWidget(widget3);
-
+    trend = new TrendWidget(this);
+    trend->hide();
 //    SYSTEM_POWER_STATUS systemPowerSatus;
 //    GetSystemPowerStatus(&systemPowerSatus);
 //    int remaindPower=(int)systemPowerSatus.BatteryLifePercent;
-
+   initLayout();
+   initButtons();
+   s = new StatusBar(this);
 }
 
 Widget::~Widget()
 {
 }
 
-void Widget::addWidgets()
-{
-    stackedwidget = new QStackedWidget(this);
-    widget1 = new QOpenGLWidget;
-    widget2 = new QOpenGLWidget;
-    widget3 = new QOpenGLWidget;
-    stackedwidget->addWidget(widget1);
-    stackedwidget->addWidget(widget2);
-    stackedwidget->insertWidget(2,widget3);
-    stackedwidget->resize(960,720);
-    widget1->resize(960,617);
-    widget2->resize(960,617);
-    widget3->resize(960,617);
-}
 
 //绘制框架
 void Widget::paintEvent(QPaintEvent *)
 {
     QPainter paint;
-    paint.begin(widget1);
+    paint.begin(this);
     QRectF rectangle(1, 1, 958, 618);
     paint.setPen(QPen(QColor(166, 222, 255), 2, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
     paint.drawRect(rectangle);//<------画一个矩形框
@@ -71,7 +57,7 @@ void Widget::initLayout()
 
 //    获取容器的调色板
     QPalette palette = this->palette();
-    palette.setColor(QPalette::Window,Qt::white);
+    palette.setColor(QPalette::Window,Qt::black);
     palette.setColor(QPalette::WindowText,Qt::white);
     this->setPalette(palette);
 //    qDebug()<<"初始化Widget";
@@ -91,8 +77,7 @@ void Widget::initButtons()
     battery = new CButton(this);
 
     firstButton->move(0,640);
-    firstButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/MainWindow/1/home.png)}"
-                              "QPushButton:checked{border-image: url(:/new/prefix1/Resource/MainWindow/1/home_press.png)}");
+    firstButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/MainWindow/1/home.png)}");
 
     secondButton->move(96,640);
     secondButton->setStyleSheet("QPushButton{border-image: url(:/new/prefix1/Resource/MainWindow/1/monitoring.png)}"
@@ -145,15 +130,19 @@ void Widget::changeWidget()
     QPushButton *button = qobject_cast<QPushButton*>(sender());
     if(button == firstButton)
     {
-        stackedwidget->setCurrentIndex(1);
+//        stackedwidget->setCurrentIndex(1);
     }
     else if(button == secondButton)
     {
-        stackedwidget->setCurrentIndex(0);
+//        stackedwidget->setCurrentIndex(0);
+        monitor->show();
+        trend->hide();
     }
     else if(button == trendButton)
     {
-        stackedwidget->setCurrentIndex(2);
+//        stackedwidget->setCurrentIndex(2);
+        trend->show();
+        monitor->hide();
     }
 }
 

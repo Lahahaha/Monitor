@@ -18,10 +18,9 @@ private:
     QPushButton *closeButton;
     QPushButton *updateButton;
     QLineEdit *passwLineEdit;
-    void aboutDialogInit();//显示信息
+    void aboutDialogInit();
     void initDialogButtons();//添加按钮
     void paintEvent(QPaintEvent *);
-
     QPixmap pix;
 
 private slots:

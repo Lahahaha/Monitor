@@ -3,7 +3,7 @@
 SpectrumGraph::SpectrumGraph(QWidget *parent) : QWidget(parent)
 {
     mPlot = new QCustomPlot(this);
-    setposition_and_size(2,500,956,118);
+    setposition_and_size(2,499,956,119);
     setupspectrum();
 }
 
