@@ -39,7 +39,6 @@ CurveGraph::CurveGraph(QWidget *parent) : QWidget(parent),mPlot(0)
 
 
 
-
 }
 void CurveGraph::setposition_and_size(int x=2,int y=51,int a=579,int b=276)
 {
@@ -50,13 +49,13 @@ void CurveGraph::setposition_and_size(int x=2,int y=51,int a=579,int b=276)
 }
 void CurveGraph::timerSlot()
 {
-  // calculate and add a new data point to each graph:
-  mGraph->addData(mGraph->dataCount(), 50+40*qSin(mGraph->dataCount()/50.0)+40*qSin(mGraph->dataCount()/50.0/0.3843)*0.25);
+  uint time = QDateTime::currentDateTime().toTime_t();
+  mGraph->addData(time, 50+40*qSin(mGraph->dataCount()/50.0)+40*qSin(mGraph->dataCount()/50.0/0.3843)*0.25);
 
   // make key axis range scroll with the data:
   mPlot->xAxis2->rescale();
 //  mGraph->rescaleValueAxis(false, true);
-  mPlot->xAxis2->setRange(mPlot->xAxis2->range().upper, 1000, Qt::AlignRight);
+  mPlot->xAxis2->setRange(mPlot->xAxis2->range().upper, 100, Qt::AlignRight);
 
   // update the vertical axis tag positions and texts to match the rightmost data point of the graphs:
 
