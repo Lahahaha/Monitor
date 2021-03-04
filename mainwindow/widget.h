@@ -27,11 +27,6 @@ public:
     SetupWidget *setupwidget;
 
 
-    QStackedWidget *stackedwidget;
-    QOpenGLWidget *widget1;
-    QOpenGLWidget *widget2;
-    QOpenGLWidget *widget3;
-
 
 
 protected:

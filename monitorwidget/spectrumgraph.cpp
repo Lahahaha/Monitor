@@ -32,7 +32,6 @@ void SpectrumGraph::setupspectrum()
     graphRandom->data()->set(dataRandom);
     graphRandom->setLineStyle(QCPGraph::lsImpulse);
     graphRandom->setPen(QPen(QColor("#FFA100"), 1.5));
-//    graphRandom->rescaleAxes();
 }
 
 void SpectrumGraph::setposition_and_size(int x=2,int y=51,int a=579,int b=276)
